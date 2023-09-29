@@ -1,0 +1,10 @@
+^C:\USERS\JTOMC\DOCUMENTS\GITHUB\COMETS\BUILD\CMAKEFILES\3830F6E6BBF3949E7B9B28B13C475607\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/jtomc/Documents/GitHub/comets -BC:/Users/jtomc/Documents/GitHub/comets/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/jtomc/Documents/GitHub/comets/build/comets.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

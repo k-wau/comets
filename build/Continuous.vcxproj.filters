@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\jtomc\Documents\GitHub\comets\build\CMakeFiles\3830f6e6bbf3949e7b9b28b13c475607\Continuous.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\jtomc\Documents\GitHub\comets\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\jtomc\Documents\GitHub\comets\build\CMakeFiles\Continuous" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{A7D37FCA-EFE1-3BEB-8ED6-088D98C85E65}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
