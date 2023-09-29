@@ -3,7 +3,12 @@
 
 int main() {
     std::cout << "yo" << std::endl;
-    InitWindow(400, 600, "swag");
+    InitWindow(600, 400, "swag???");
+
+    while(!WindowShouldClose()) {
+        BeginDrawing();
+        EndDrawing();
+    }
 
     return 0;
 }

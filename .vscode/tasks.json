@@ -10,7 +10,7 @@
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-IC:\\msys64\\mingw64\\include"
+                "-lraylib"
             ],
             "options": {
                 "cwd": "C:/msys64/ucrt64/bin"
