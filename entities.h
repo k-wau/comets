@@ -1,16 +1,12 @@
 #include <raylib.h>
 
-class Entity {
-    virtual void move(float delTime);
-};
-
-class Star : public Entity {
+class Star {
     public:
-        float x;
-        float y;
-        float size;
-        Rectangle rect;
+        int x;
+        int y;
+        int size;
 
         void move(float delTime);
         void drawRect();
+        Star();
 };

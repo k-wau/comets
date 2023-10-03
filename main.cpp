@@ -16,7 +16,7 @@ const int starArraySize = 15;
 
 int main() {
 
-    GameState state = MAINMENU;
+    GameState state = RUNNING;
     Star starArray[starArraySize];
     int starIndex = 0;
 
@@ -25,10 +25,14 @@ int main() {
     while(!WindowShouldClose()) {
 
         if (state == RUNNING) {
-            if ((int)GetTime() % 2 == 0) {
+            if (GetTime() * 3 - (int)GetTime() * 3 <= 0.004) {
                 starArray[starIndex].x = GetScreenWidth();
                 starArray[starIndex].y = rand() % GetScreenHeight();
-                starArray[starIndex].size = rand() % 7;
+                starArray[starIndex].size = (rand() % 4) + 3;
+                starIndex++;
+                if (starIndex == starArraySize) {
+                    starIndex = 0;
+                }
             }
         }
 
@@ -39,7 +43,9 @@ int main() {
         BeginDrawing();
             ClearBackground(BLACK);
             for (int i = 0; i < starArraySize; i++) {
-                starArray[i].drawRect();
+                if (starArray[i].x > 0) {
+                    starArray[i].drawRect(); 
+                }
             }
 
         EndDrawing();
