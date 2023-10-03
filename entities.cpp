@@ -1,7 +1,7 @@
 #include <raylib.h>
 #include "entities.h"
 
-int starSpeed = 30;
+int starSpeed = 20;
 
 Star::Star() {
     x = 0;
@@ -10,7 +10,7 @@ Star::Star() {
 }
 
 void Star::move(float delTime) {
-    x -= size * starSpeed * delTime;
+    x -= (size * size - 8) * starSpeed * delTime;
 }
 
 void Star::drawRect() {

@@ -21,18 +21,21 @@ int main() {
     int starIndex = 0;
 
     InitWindow(600, 400, "swag???");
+    SetTargetFPS(120);
 
     while(!WindowShouldClose()) {
 
         if (state == RUNNING) {
-            if (GetTime() * 3 - (int)GetTime() * 3 <= 0.004) {
-                starArray[starIndex].x = GetScreenWidth();
-                starArray[starIndex].y = rand() % GetScreenHeight();
-                starArray[starIndex].size = (rand() % 4) + 3;
-                starIndex++;
-                if (starIndex == starArraySize) {
-                    starIndex = 0;
-                }
+            
+        }
+
+        if (rand() % 120 == 0) {
+            starArray[starIndex].x = GetScreenWidth();
+            starArray[starIndex].y = rand() % GetScreenHeight();
+            starArray[starIndex].size = (rand() % 4) + 3;
+            starIndex++;
+            if (starIndex == starArraySize) {
+                starIndex = 0;
             }
         }
 
@@ -41,10 +44,11 @@ int main() {
         }
 
         BeginDrawing();
+
             ClearBackground(BLACK);
             for (int i = 0; i < starArraySize; i++) {
                 if (starArray[i].x > 0) {
-                    starArray[i].drawRect(); 
+                    starArray[i].drawRect();
                 }
             }
 
